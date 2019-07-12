@@ -96,6 +96,11 @@ function elements.dropdown(x,w)
     return self
   end
 
+  function ele.addOption(self,text,onClick)
+    self.options[#self.options+1] = {text=text,onClick=onClick}
+    return self
+  end
+
   function ele.destroyWidget(self)
     if self.back then
       self.back.widget.removeWidget()
